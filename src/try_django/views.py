@@ -3,7 +3,11 @@ from django.shortcuts import render
 from django.template.loader import get_template
 
 def home_page(request):
-    return render(request, "home.html", {"title": "Home"})
+    my_title = "ET Phone Home"
+    context = {"title": "Who will phone home?"}
+    if request.user.is_authenticated:
+        context = {"title": my_title, "my_list": [1, 2, 3, 4, 5]}
+    return render(request, "home.html", context)
 
 def about_page(request):
     return render(request, "about.html", {"title": "About"})
