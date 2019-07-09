@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "/home/mps/.local/share/virtualenvs/try_django-MVdus4bL/bin/python"
+	}
+}

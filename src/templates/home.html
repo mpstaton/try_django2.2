@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+<h1> We're home. </h1>
+
+{% endblock %}
+
+{% block content %}
+<p>This is more on the way home. </p>
+
+{{ title }}
+
+{{ user }}
+{{ user.is_authenticated }}
+
+{{ request.path }}
+
+{% endblock %}
