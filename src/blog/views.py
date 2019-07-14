@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 from .models import BlogPost
 
-def blog_post_detail_page(request, slug):
+def blog_post_detail_view(request, slug):
     print("DJANGO SAYS", request.method, request.path, request.user)
     #queryset = BlogPost.objects.filter(slug=slug)
     obj = get_object_or_404(BlogPost, slug=slug)
