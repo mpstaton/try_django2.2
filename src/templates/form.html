@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+
+{% if title %}
+    <h1> {{ title }} </h1>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+<p>Why are you getting in touch? </p>
+
+<form method='POST' action='.'> {% csrf_token %}
+    <input type="text" name="full_name">
+    <input type="email" name="email">
+
+    <textarea name="content" cols="30" rows="10"></textarea>
+    <button type='submit'></button>
+</form>
+
+{% endblock %}
